@@ -3,6 +3,9 @@ import contextMenu from 'electron-context-menu';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
 
+declare const MAIN_WINDOW_VITE_DEV_SERVER_URL: string;
+declare const MAIN_WINDOW_VITE_NAME: string;
+
 console.log('App started');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
