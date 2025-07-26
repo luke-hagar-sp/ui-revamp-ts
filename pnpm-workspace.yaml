@@ -1,8 +1,0 @@
-packages:
-  - 'packages/*'
-
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - electron
-  - electron-winstaller
-  - esbuild

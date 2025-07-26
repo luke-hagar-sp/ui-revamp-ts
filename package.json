@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "pnpm --filter ui-revamp-ts start",
-    "build": "pnpm --filter ui-revamp-ts package",
-    "make": "pnpm --filter ui-revamp-ts make",
-    "build:components": "pnpm --filter sailpoint-components build",
-    "dev:components": "pnpm --filter sailpoint-components build --watch"
-  }
+    "dev": "npm run build:components && npm run --workspace=ui-revamp-ts start",
+    "build": "npm run build:components && npm run --workspace=ui-revamp-ts package",
+    "make": "npm run build:components && npm run --workspace=ui-revamp-ts make",
+    "build:components": "npm run build --workspace=sailpoint-components"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

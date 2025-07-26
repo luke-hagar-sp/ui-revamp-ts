@@ -22,7 +22,6 @@
   },
   "include": [
     "src/**/*",
-    "electron/**/*"
   ],
   "exclude": [
     "node_modules",

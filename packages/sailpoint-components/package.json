@@ -25,13 +25,5 @@
     "sequential-workflow-editor": "0.14.8",
     "sequential-workflow-editor-model": "0.14.8",
     "sequential-workflow-model": "0.2.0"
-  },
-  "sideEffects": false,
-  "exports": {
-    "./sequential-workflow-designer": "./dist/sequential-workflow-designer.js",
-    "./sequential-workflow-designer-angular": "./dist/sequential-workflow-designer-angular.js",
-    "./sequential-workflow-editor": "./dist/sequential-workflow-editor.js",
-    "./sequential-workflow-editor-model": "./dist/sequential-workflow-editor-model.js",
-    "./sequential-workflow-model": "./dist/sequential-workflow-model.js"
   }
 }
