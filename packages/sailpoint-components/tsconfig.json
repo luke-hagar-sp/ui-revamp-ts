@@ -3,15 +3,19 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../out-tsc/lib",
-    "declaration": true,
-    "declarationMap": true,
-    "inlineSources": true,
+    "lib": ["es2022", "dom"],
+    "baseUrl": ".",
+    "outDir": "dist",
     "types": [],
-    "lib": ["es2019", "dom"],
-    "skipLibCheck": true
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
+    "node_modules",
+    "dist",
+    "../../dist",
     "**/*.spec.ts"
-  ]
+  ],
 }
+

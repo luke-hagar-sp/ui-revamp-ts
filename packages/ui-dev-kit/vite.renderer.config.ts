@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -6,7 +7,7 @@ export default defineConfig({
     mainFields: ['module'],
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
     alias: {
-      'sailpoint-components': '../sailpoint-components/src/public-api.ts'
+      'sailpoint-components': resolve(__dirname, '../sailpoint-components/dist/fesm2022/sailpoint-components.mjs')
     }
   },
   build: {
@@ -19,7 +20,7 @@ export default defineConfig({
     port: 4200
   },
   root: '.',
-  publicDir: 'src/assets',
+  publicDir: 'src/angular/assets',
   optimizeDeps: {
     include: [
       '@angular/core', 
@@ -33,6 +34,9 @@ export default defineConfig({
       '@ngx-translate/http-loader',
       'rxjs',
       'zone.js'
+    ],
+    exclude: [
+      'sailpoint-components'
     ]
   },
   esbuild: {

@@ -68,7 +68,7 @@ export class ThemePickerComponent implements OnInit {
   ];
 
   // Track current theme mode
-  mode: 'light' | 'dark' = this.themeService.getCurrentMode();
+  mode: 'light' | 'dark' = 'light'; // Will be initialized in constructor
 
   // Spinner visibility
   loading = false;
@@ -178,7 +178,10 @@ export class ThemePickerComponent implements OnInit {
     private themeService: ThemeService,
     private cdr: ChangeDetectorRef,
     private snackBar: MatSnackBar 
-  ) {}
+  ) {
+    // Initialize mode after dependency injection
+    this.mode = this.themeService.getCurrentMode();
+  }
 
   // Utility: Read file input into Uint8Array buffer
   private readFileAsBuffer(file: File): Promise<Uint8Array> {

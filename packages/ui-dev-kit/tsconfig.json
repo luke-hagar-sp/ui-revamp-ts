@@ -1,24 +1,12 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "noImplicitAny": true,
-    "sourceMap": true,
     "baseUrl": ".",
     "outDir": "dist",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "paths": {
-      "sailpoint-components": ["../sailpoint-components/src/public-api.ts"]
-    }
+      "sailpoint-components": ["../sailpoint-components/dist/index.d.ts"]
+    },
+    "experimentalDecorators": true,
   },
   "include": [
     "src/**/*",
@@ -26,5 +14,5 @@
   "exclude": [
     "node_modules",
     "dist"
-  ]
+  ],
 }

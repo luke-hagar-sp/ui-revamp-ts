@@ -3,12 +3,6 @@
   "version": "0.0.1",
   "main": "src/public-api.ts",
   "types": "src/public-api.ts",
-  "scripts": {
-    "build": "ng build sailpoint-components",
-    "test": "ng test sailpoint-components",
-    "lint": "ng lint sailpoint-components",
-    "postinstall": "ngcc"
-  },
   "dependencies": {
     "@angular-devkit/build-angular": "^20.1.3",
     "@angular/animations": "^20.1.3",
@@ -43,7 +37,16 @@
     "./sequential-workflow-designer-angular": "./dist/sequential-workflow-designer-angular.js",
     "./sequential-workflow-editor": "./dist/sequential-workflow-editor.js",
     "./sequential-workflow-editor-model": "./dist/sequential-workflow-editor-model.js",
-    "./sequential-workflow-model": "./dist/sequential-workflow-model.js"
+    "./sequential-workflow-model": "./dist/sequential-workflow-model.js",
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./fesm2022/sailpoint-components.mjs"
+    }
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "module": "fesm2022/sailpoint-components.mjs",
+  "typings": "index.d.ts"
 }

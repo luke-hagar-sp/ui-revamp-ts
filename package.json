@@ -1,13 +1,6 @@
 {
-  "name": "ui-dev-kit-workspace",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "npm run build:components && npm run --workspace=ui-revamp-ts start",
-    "build": "npm run build:components && npm run --workspace=ui-revamp-ts package",
-    "make": "npm run build:components && npm run --workspace=ui-revamp-ts make",
-    "build:components": "npm run build --workspace=sailpoint-components"
-  },
+  "name": "ui-revamp-ts-workspace",
+  "packageManager": "yarn@4.9.2",
   "workspaces": [
     "packages/*"
   ]
